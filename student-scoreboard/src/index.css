@@ -1,0 +1,319 @@
+/* ==========================================
+   EXACT SCREENSHOT STYLE + SMALLER READABLE FONT
+   PREMIUM CYBERPUNK FINAL VERSION
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#02070d;
+  min-height:100vh;
+  font-family:'Rajdhani', sans-serif;
+  color:#fff;
+  padding:45px;
+  overflow-x:hidden;
+
+  background-image:
+    linear-gradient(rgba(0,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.035) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+
+.container{
+  max-width:1080px;
+  margin:auto;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+h1{
+  font-family:'Orbitron', sans-serif;
+  font-size:78px;
+  font-weight:900;
+  text-transform:uppercase;
+  line-height:1;
+  margin-bottom:42px;
+  letter-spacing:1px;
+  color:#dbeeff;
+}
+
+h1 span{
+  color:#00fff0;
+  text-shadow:
+    0 0 10px #00fff0,
+    0 0 20px #00fff0,
+    0 0 45px #00fff0;
+}
+
+h1::after{
+  content:"";
+  display:block;
+  margin-top:26px;
+  height:2px;
+  width:100%;
+  background:#00fff0;
+  box-shadow:0 0 10px #00fff0;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+form{
+  border:1px solid rgba(0,255,255,0.14);
+  background:rgba(0,10,18,0.55);
+  display:grid;
+  grid-template-columns:2fr 2fr 110px;
+  margin-bottom:34px;
+}
+
+form::before{
+  content:"● REGISTER STUDENT";
+  grid-column:1/-1;
+  padding:16px 22px;
+  color:#4abed7;
+  font-size:13px;
+  letter-spacing:3px;
+  border-bottom:1px solid rgba(0,255,255,0.08);
+}
+
+form input{
+  height:58px;
+  background:transparent;
+  border:none;
+  border-right:1px solid rgba(0,255,255,0.08);
+  padding:0 22px;
+  color:#ffffff;
+  font-size:22px;
+  outline:none;
+  font-family:'Rajdhani', sans-serif;
+}
+
+form input::placeholder{
+  color:#4f89a2;
+  font-size:20px;
+}
+
+form button{
+  background:transparent;
+  border:none;
+  color:#00fff0;
+  font-size:30px;
+  font-weight:700;
+  cursor:pointer;
+  font-family:'Rajdhani', sans-serif;
+  transition:.3s;
+}
+
+form button:hover{
+  background:#00fff0;
+  color:#00141c;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-bottom:40px;
+}
+
+.stats p{
+  min-height:100px;
+  border:1px solid rgba(0,255,255,0.12);
+  background:rgba(0,10,18,0.45);
+  padding:18px 24px;
+  color:#00fff0;
+  font-size:46px;
+  font-weight:700;
+  position:relative;
+}
+
+.stats p::before{
+  content:attr(data-label);
+  position:absolute;
+  top:14px;
+  left:24px;
+  color:#5f8fa2;
+  font-size:11px;
+  letter-spacing:3px;
+  font-weight:500;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  border:1px solid rgba(0,255,255,0.12);
+  background:rgba(0,10,18,0.45);
+}
+
+thead::before{
+  content:"STUDENT RECORDS";
+  display:block;
+  padding:18px 22px;
+  color:#5f8fa2;
+  font-size:13px;
+  letter-spacing:4px;
+  border-bottom:1px solid rgba(0,255,255,0.08);
+}
+
+thead tr{
+  background:rgba(30,70,100,0.12);
+}
+
+th{
+  text-align:left;
+  padding:16px 24px;
+  color:#5f8fa2;
+  font-size:12px;
+  letter-spacing:3px;
+  font-weight:600;
+}
+
+td{
+  padding:18px 24px;
+  border-top:1px solid rgba(0,255,255,0.06);
+  font-size:16px;
+  font-weight:500;
+}
+
+tbody tr{
+  transition:.3s;
+}
+
+tbody tr:hover{
+  background:rgba(0,255,255,0.025);
+}
+
+/* neon left border */
+tbody tr td:first-child{
+  border-left:4px solid #00ffb3;
+}
+
+/* score */
+tbody tr td:nth-child(2){
+  color:#ffc94a;
+  font-size:18px;
+  font-weight:700;
+}
+
+/* ==========================
+   STATUS
+========================== */
+
+.pass{
+  color:#00ff9d;
+  border:1px solid rgba(0,255,157,.35);
+  padding:5px 14px;
+  font-size:12px;
+  letter-spacing:2px;
+  display:inline-block;
+}
+
+.fail{
+  color:#ff4969;
+  border:1px solid rgba(255,73,105,.35);
+  padding:5px 14px;
+  font-size:12px;
+  letter-spacing:2px;
+  display:inline-block;
+}
+
+/* ==========================
+   UPDATE AREA
+========================== */
+
+td input{
+  width:72px;
+  height:34px;
+  border:1px solid rgba(0,255,255,0.12);
+  background:transparent;
+  color:#fff;
+  text-align:center;
+  font-size:16px;
+  margin-right:8px;
+  font-family:'Rajdhani', sans-serif;
+}
+
+td button{
+  width:62px;
+  height:34px;
+  border:1px solid rgba(0,255,255,0.12);
+  background:transparent;
+  color:#5f8fa2;
+  font-size:12px;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:.3s;
+  font-family:'Rajdhani', sans-serif;
+}
+
+td button:hover{
+  background:#00fff0;
+  color:#00141c;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+  width:7px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#00fff0;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+  body{
+    padding:20px;
+  }
+
+  h1{
+    font-size:42px;
+  }
+
+  form{
+    grid-template-columns:1fr;
+  }
+
+  form input{
+    border-right:none;
+    border-bottom:1px solid rgba(0,255,255,0.08);
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  th,td{
+    padding:12px;
+    font-size:14px;
+  }
+
+  td input{
+    width:60px;
+  }
+}
